@@ -7,6 +7,7 @@ add_library(${LIB}
     MDRawText.cxx
     MDTitle.cxx
     MDParser.cxx
+    MDParagraph.cxx
 )
 
 target_link_libraries(${LIB} 

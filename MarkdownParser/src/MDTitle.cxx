@@ -6,12 +6,12 @@ std::map<HeaderLevel, std::string> s_htmlTagMap = { {H1, "h1"}, {H2, "h2"}, {H3,
 
 std::string MDTitle::toString() const
 {
-    std::string result = s_mdPrefixMap[m_level] + m_content.toString();
+    std::string result = s_mdPrefixMap[m_level] + MDContent::toString();
     return result;
 }
 
 std::string MDTitle::toHTML() const
 {
-    std::string result = "<" + s_htmlTagMap[m_level] + ">" + m_content.toString() + "</" + s_htmlTagMap[m_level] + ">";
+    std::string result = "<" + s_htmlTagMap[m_level] + ">" + MDContent::toHTML() + "</" + s_htmlTagMap[m_level] + ">";
     return result;
 }

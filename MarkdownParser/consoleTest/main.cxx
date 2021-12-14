@@ -18,14 +18,26 @@ void exercise1()
 
 void exercise2()
 {
+    std::cout << "==== EXERCISE 2 ====" << std::endl;
     std::string txt = "# Title\n## Subtitle\nContent";
     std::shared_ptr<MDContent> content = MDParser::parseMD(txt);
     std::cout << content->toString() << std::endl;
+    std::cout << content->toHTML() << std::endl;
+}
+
+void exercise3()
+{
+    std::cout << "==== EXERCISE 3 ====" << std::endl;
+    std::string txt = "Par1\n#Titre\nPar2-l1\nPar2-l2\n\n\nPar3\n";
+    std::shared_ptr<MDContent> content = MDParser::parseMD(txt);
+    std::cout << content->toString() << std::endl;
+    std::cout << content->toHTML() << std::endl;
 }
 
 int main(int argc, char **argv)
 {
     exercise1();
     exercise2();
+    exercise3();
     return 0;
 }

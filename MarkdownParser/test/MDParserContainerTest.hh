@@ -57,8 +57,9 @@ TEST_F(MDParserContainerUnitTest, mdRawTextTest)
 TEST_F(MDParserContainerUnitTest, mDTitleTest)
 {
     // call readFromDirectory with test data directory
-    MDRawText theText("Test title");
-    MDTitle theTitle(theText, H1);
+    std::shared_ptr<MDRawText> theText = std::make_shared<MDRawText>("Test title");
+    MDTitle theTitle(H1);
+    theTitle.addItem(theText);
 
     // Check data content after read
     std::string expectedMDText("#Test title");
