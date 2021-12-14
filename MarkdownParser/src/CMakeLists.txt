@@ -8,6 +8,8 @@ add_library(${LIB}
     MDTitle.cxx
     MDParser.cxx
     MDParagraph.cxx
+    MDBold.cxx
+    MDItalic.cxx
 )
 
 target_link_libraries(${LIB} 
