@@ -7,6 +7,7 @@ To build this project :
     - mingw-w64-x86_64-gtest (used version 1.11.0)
 - open mingw-w64 shell of Msys2, clone this Git project into your HOME directory
 - build the project : 
+    - cd MarkdownParser  
     - mkdir build
     - cd build
     - cmake ..
