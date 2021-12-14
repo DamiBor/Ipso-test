@@ -1,1 +1,17 @@
-# Ipso-test
+To build this project : 
+- install latest version Msys2 and mingw-w64 GCC : https://www.msys2.org/
+- install following package in your Msys2 environment using pacman : 
+    - Git (used version 2.33.0)
+    - mingw-w64-x86_64-cmake (used version 3.21.3)
+    - mingw-w64-x86_64-ninja (used version 1.10.2)
+    - mingw-w64-x86_64-gtest (used version 1.11.0)
+- open mingw-w64 shell of Msys2, clone this Git project into your HOME directory
+- build the project : 
+    - mkdir build
+    - cd build
+    - cmake ..
+    - ninja all
+- execute unit test (from build directory)
+    - test/MDParserTest.exe
+- execute console tests (from build directory)
+    - consoleTest/MDParserConsoleTest.exe
